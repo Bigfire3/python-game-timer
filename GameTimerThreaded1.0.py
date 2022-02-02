@@ -45,15 +45,15 @@ def clockToString(h, m, s):
     clockString = hString + ":" + mString + ":" + sString
     return clockString
 
-def main():
+"""def main():
     global gameTimeLabel
     hSet, mSet, sSet = secondsToClock(setGameSeconds)
     allTimeLabel.config(text = "00:00:00/" + clockToString(hSet, mSet, sSet))
-    """if "Time.exe" in (p.name() for p in psutil.process_iter()):
-        #if runTimer == False:
-        #    rlStartTime = time.time()
-        #    rlRunning = True
-        #    runTimer = True
+    if "Time.exe" in (p.name() for p in psutil.process_iter()):
+        if runTimer == False:
+            rlStartTime = time.time()
+            rlRunning = True
+            runTimer = True
     #if "ModernWarfare.exe" in (p.name() for p in psutil.process_iter()): # RocketLeague.exe
         #if runTimer == False:
             #wzStartTime = time.time()
@@ -62,7 +62,7 @@ def main():
     else:
         rlRunning = False
         wzRunning = False
-        runTimer = False"""
+        runTimer = False
     
     if rlRunning:
         rlElapsedSeconds = int(time.time()) - int(rlStartTime)
@@ -73,7 +73,7 @@ def main():
     if wzRunning:
         pass
         #toaster.show_toast("GameTimer", "Hör auf zu spielen!!! Du spielst schon eine halbe Stunde")
-    #gameTimeLabel.after(1, main)
+    #gameTimeLabel.after(1, main)"""
 
 window = Tk()
 window.title("GameTime")
@@ -89,6 +89,6 @@ minusButton.grid(row = 1, column = 1, padx = 50)
 allTimeLabel.grid(row = 0, column = 0)
 gameTimeLabel.grid(row = 1, column = 0)
 
-while True:
-    main()
-window.mainloop()
+#while True:
+#    main()
+#window.mainloop()
