@@ -17,20 +17,8 @@ def seconds_to_clock(seconds: int) -> str:
     h = int(seconds // 3600)
     m = int((seconds % 3600) // 60)
     s = int((seconds % 3600) % 60)
-
-    if h < 10:
-        h_string = "0" + str(h)
-    else:
-        h_string = str(h)
-    if m < 10:
-        m_string = "0" + str(m)
-    else:
-        m_string = str(m)
-    if s < 10:
-        s_string = "0" + str(s)
-    else:
-        s_string = str(s)
-    clock_string = h_string + ":" + m_string + ":" + s_string
+    clock_list = [str(h).zfill(2), str(m).zfill(2), str(s).zfill(2)]
+    clock_string = ":".join(clock_list)
     return clock_string
 
 def check_process(process_name):
